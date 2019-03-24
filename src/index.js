@@ -13,7 +13,7 @@ module.exports = function check(str, bracketsConfig) {
 			let closening = bracketsConfig[j][1];
 
 			if (firstSimbol == opening && secondSimbol == closening) {
-				arrayChars.replace(i,'');
+				arrayChars.splice(i,2);
 				let result = check(arrayChars.join(''), bracketsConfig);
 				return result;
 			}
